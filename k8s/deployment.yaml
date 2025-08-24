@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: heart-disease-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: heart-disease
+  template:
+    metadata:
+      labels:
+        app: heart-disease
+    spec:
+      containers:
+      - name: heart-disease-api
+        image: us-central1-docker.pkg.dev/<YOUR_PROJECT_ID>/heart-disease-repo/heart-disease-api:v1
+        ports:
+        - containerPort: 8000
+        resources:
+          requests:
+            cpu: "250m"
+          limits:
+            cpu: "500m"
