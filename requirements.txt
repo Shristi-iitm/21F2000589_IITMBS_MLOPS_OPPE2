@@ -1,0 +1,15 @@
+
+pandas
+scikit-learn
+fastapi
+uvicorn
+gunicorn
+shap
+fairlearn
+google-cloud-storage
+dvc[gcs]
+numpy
+ evidently
+dvc-gs>=2.0.0
+google-cloud-storage>=2.0.0
+matplotlib
